@@ -1,0 +1,44 @@
+Text vs Binary Files
+
+1. Newlines :-
+"We have already seen that, in text mode, a newline character is 
+converted into the carriage return-linefeed combination before 
+being written to the disk. Likewise, the carriage return-linefeed 
+combination on the disk is converted back into a newline when the 
+file is read by a C program. However, if a file is opened in binary 
+mode, as opposed to text mode, these conversions will not take 
+place."
+
+2. End of file :-
+"The second difference between text and binary modes is in the way 
+the end-of-file is detected. In text mode, a special character, whose 
+ASCII value is 26, is inserted after the last character in the file to 
+mark the end of file. If this character is detected at any point in the 
+file, the read function would return the EOF signal to the program.
+As against this, there is no such special character present in the 
+binary mode files to mark the end of file. The binary mode files 
+keep track of the end of file from the number of characters present 
+in the directory entry of the file. "
+
+( So the file that has been written in text mode is read back only in text mode. 
+    Similarly, the file that has been written in binary mode must be 
+    read back only in binary mode.)
+
+3. Storage of Numbers :-
+"The only function that is available for storing numbers in a disk 
+file is the fprintf( ) function. It is important to understand how 
+numerical data is stored on the disk by fprintf( ). Text and 
+characters are stored one character per byte, as we would expect. 
+Are numbers stored as they are in memory, two bytes for an 
+integer, four bytes for a float, and so on? No.  
+Numbers are stored as strings of characters. Thus, 1234, even 
+though it occupies two bytes in memory, when transferred to the 
+disk using fprintf( ), would occupy four bytes, one byte per 
+character. Similarly, the floating-point number 1234.56 would 
+occupy 7 bytes on disk. Thus, numbers with more digits would 
+require more disk space."
+(So The solution is 
+    to open the file in binary mode and use those functions (fread( ) 
+    and fwrite( ) which are discussed later) which store the numbers in 
+    binary format. It means each number would occupy same number 
+    of bytes on disk as it occupies in memory.)

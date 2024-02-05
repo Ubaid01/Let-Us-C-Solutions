@@ -1,0 +1,56 @@
+(g) Match the following with reference to the following segment: 
+int  x[3][5] = { 
+    { 1, 2, 3, 4, 5 }, 
+    { 6, 7, 8, 9, 10 }, 
+    { 11, 12, 13, 14, 15 } 
+   }, *n = &x ; 
+ 
+"Before 1st dereferncing it increments in Row then column and then value for 2D-array."
+"We can use single pointer only if dirctly accessing array by pointer. so **n is not allowed."
+1. *( *( x + 2 ) + 1)      a. 9 
+2. *( *x + 2 ) + 5          b. 13 
+3. *( *( x + 1) )           c. 4 
+4. *( *( x ) + 2 ) + 1      d. 3 
+5. * ( *( x + 1 ) + 3 )     e. 2 
+6. *n                       f. 12 
+7. *( n +2 )                g. 14 
+8. (*(n + 3 ) )+ 1           h. 7 
+9. *(n + 5)+1               i. 1 
+10. ++*n                    j. 8 
+                            k. 5 
+                            l. 10 
+                            m.  6 
+
+"So Correct Answers:- "
+
+1. *( *( x + 2 ) + 1)  
+    "This will give the 3rd Roe 0 + 2 and then in it 1st column so  x[2][1] value = f. 12 "
+
+2. *( *x + 2 ) + 5 = h. 7
+" This expression is attempting to dereference the value at the address pointed to by *x (which is the first element of x). Then, it adds 2 to this value i.e. address of x[0][0] in column so x[0][2] = 3 and then adds 5 to it becoming  j. 8 "
+
+"If there is only 1 address to be added after dereferncing than it i column if before dereferncing then it is row."
+
+3. *( *( x + 1) ) 
+"This will 1st increment row address to [1][0] then dereference its value so x[1][0] = m. 6"
+
+4. *( *( x ) + 2 ) + 1  
+"It will first dereference the x[0] address then increments column to 2 and value of x[0][2] = 3 and then adds 1 in it so c. 4"
+
+5. * ( *( x + 1 ) + 3 )
+"This will first increment row to 1 and column to 3 so value of x[1][3] = a. 9"
+
+6. *n 
+"This will directly refer to the value pointing to base address x[0][0] i.e. i. 1"
+
+7. *( n +2 ) 
+"This will increment to x[0][2] and then points to its value i.e. d. 3"
+
+8. (*(n + 3 ) ) + 1
+"This will increment to x[0][3] and then points to its value i.e. 4 then added 1 is 5." 
+
+9. *(n + 5) + 1
+"This will do same as above first points to x[0][5] but since maximum index is x[0][4] so it will move to next roww and points to x[1][0] value i.e. 6 then added 1 will be h. 7"    
+
+10. ++ *n
+"This will increment the value pointing base address by 1 i.e. e. 2."

@@ -1,0 +1,12 @@
+[C] Fill in the blanks: 
+(a) "A" is a ___________ while 'A' is a ____________. 
+(b)  A string is terminated by a ______ character, which is written as ______. 
+(c) The array char name[10] can consist of a maximum of ______ characters. 
+(d) The array elements are always stored in _________ memory locations. 
+
+" (a) "A" is a character literal (string) whle 'A' is a character constant . "
+" (b) A string is terminated by a null character, which is written as '\0'. "
+" (c) The array char name[10] can consist of a maximum of 9 characters (plus 1 for the null terminator)." 
+" (d) The array elements are always stored in contiguous memory locations. "
+
+[D] "Most appropriate for multi-word string is fgets() OR gets() . " 

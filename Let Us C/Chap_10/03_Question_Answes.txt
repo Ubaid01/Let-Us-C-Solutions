@@ -1,0 +1,41 @@
+[C] Answer the following: 
+
+(a) Ten floats are to be stored in memory. What would you prefer, an array or a structure? 
+"For simply storing ten floats, an array would be a more straightforward and efficient choice. Arrays are ideal for storing a collection of homogeneous elements, like floats in this case."
+
+(b) Given the statement,  
+    maruti.engine.bolts = 25 ; 
+which of the following is True? 
+1. structure bolts is nested within structure engine    (Correct)
+2. structure engine is nested within structure maruti   (Correct) 
+3. structure maruti is nested within structure engine 
+4. structure maruti is nested within structure bolts 
+    "As first structure name is used then its members with dot operator.
+So   maruti seems to be a higher-level structure or object.
+     engine appears to be nested within maruti.
+     bolts seems to be nested within engine."
+
+(c) State True or False: 
+1. All structure elements are stored in contiguous memory locations. 
+"True. All elements of a structure are stored in contiguous memory locations."
+2. An array should be used to store dissimilar elements, and a structure to store similar elements. 
+"False. The vice versa is possible and more efficiently used."
+3. In an array of structures, not only are all structures stored in contiguous memory locations, but the elements of individual structures are also stored in contiguous locations.  
+"True. In an array of structures, all structures are stored one after another in contiguous memory locations, and within each structure, its elements are also stored contiguously."
+(d) 
+    struct time { 
+        int  hours ; 
+        int  minutes ; 
+        int  seconds ; 
+    } t ; 
+struct time  *tt ; 
+tt = &t ; 
+Looking at the above declarations, which of the following refers to seconds correctly: 
+1. tt.seconds  
+2. ( *tt ).seconds      (Correct) 
+3. time.t 
+4. tt -> seconds        (Correct) 
+"In C, there are two main ways to access structure members through a pointer:
+
+1. Dereferencing the pointer explicitly and then accessing the structure members using the dot operator.
+2. Using the arrow operator (->), which combines the dereference and member access in a single step."

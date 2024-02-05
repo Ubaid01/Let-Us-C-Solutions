@@ -1,0 +1,47 @@
+[C] Answer the following: 
+
+(a) To receive the string "We have got the guts, you get the glory!!" in an array char str[100]?
+    which of the following functions would you use? 
+1. scanf ( "%s", str ) ; 
+2. gets ( str ) ;       (Correct)
+3. getche ( str ) ; 
+4. fgetchar ( str ) ; 
+"gets(str); is used to receive an entire string with spaces until a newline character is encountered. It reads characters from the standard input and stores them into the string until a newline or EOF is reached. However, please note that gets() is considered unsafe due to potential buffer overflow issues. A safer alternative in modern C programming is to use fgets()."
+
+(b) Which function would you use if a single key were to be received through the keyboard? 
+1. scanf( ) 
+2. gets( ) 
+3. getche( )    (Correct)
+4. getchar( ) 
+"getche(); reads a single character from the console and echoes it to the screen."
+
+(c) If an integer is to be entered through the keyboard, which function would you use? 
+1. scanf( )     (Correct)
+2. gets( ) 
+3. getche( ) 
+4. getchar( ) 
+"scanf(); with the appropriate format specifier (%d for integers) is commonly used to read integers from the keyboard."
+
+(d) If a character string is to be received through the keyboard which function would work faster? 
+1. scanf( ) 
+2. gets( )      (Correct)
+"gets(); may work faster because it reads an entire line at once until it encounters a newline character"
+
+(e) What is the difference between getchar( ), fgetchar( ), getch( ) and getche( )? 
+"getchar(): Reads a single character from standard input (stdin) and returns it.
+fgetchar(): There's no standard function named fgetchar() in C. Perhaps you meant fgetc() which reads a character from a file.
+getch(): Reads a single character from the console without echoing it to the screen. (Note: This function is not part of the standard library and may not be available in all compilers.)
+getche(): Reads a single character from the console and echoes it to the screen."
+
+(f) The format string of a printf( ) function can contain: 
+1. Characters, format specifications and escape sequences (Correct) "As this option includes all"
+2. Character, integers and floats 
+3. Strings, integers and escape sequences 
+4. Inverted commas, percentage sign and backslash character 
+
+(g) A field-width specifier in a printf( ) function: 
+1. Controls the margins of the program listing 
+2. Specifies the maximum value of a number 
+3. Controls the size of type used to print numbers 
+4. Specifies how many columns will be used to print the number (Correct)
+" For example, %5d will print an integer with at least 5 characters' width from left side (padded with spaces if necessary)."

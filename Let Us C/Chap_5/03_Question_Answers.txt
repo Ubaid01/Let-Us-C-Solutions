@@ -1,0 +1,30 @@
+[C] Answer the following: 
+(a) Is this a correctly written function: 
+sqr ( a ) ; 
+int a ; 
+{ 
+ return ( a * a ) ; 
+} 
+" No, this is not a correctly written function. The function lacks a proper return type declaration. It should declare a return type for the function sqr, such as int sqr(int a) ; "
+
+(b) State whether the following statements are True or False:
+1. The variables commonly used in C functions are available to all the functions in a program. 
+// False: " Variables declared within a function are local to that function and cannot be directly accessed by other functions (Scope of variable is not available in other functions). Global variables, declared outside of any function, are accessible by all functions within a program. "
+2. To return the control back to the calling function we must use the keyword return. 
+// False: " It is not necessary to use the return keyword. After the execution of the last statement of the called function, control goes back to calling function even without the use of the return statement, if the return type of the function is void. "
+3. The same variable names can be used in different functions without any conflict.
+// True: " Variable names used in different functions can be the same since they are local to their respective functions and do not conflict. " 
+4. Every called function must contain a return statement.
+// False: " Not every function needs to contain a return statement. Functions with a return type of void do not necessarily require a return statement."
+5. A function may contain more than one return statements. 
+// True: " A function can have multiple return statements. However, all of these return statements must conform to the function's return type. "
+6. Each return statement in a function may return a different value.
+// True: " Each return statement in a function can return a different value if the function has multiple return statements . But datatype should remain the same as the return type of function."
+7. A function can still be useful even if you don't pass any arguments to it and the function doesn't return any value back.
+// True: " A function can perform tasks internally and can be useful without taking any arguments or returning any values. Side effects like void, printing output, modifying global variables, etc., might still make it useful. " 
+8. Same names can be used for different functions without any conflict. 
+// True: " Functions can have the same name if they are in different scopes (for instance, in different files or with different prototypes). "
+9. A function may be called more than once from any other function.
+// True: " Functions can be called multiple times from within the same or different functions. " 
+10. It is necessary for a function to return some value.
+// False: " For functions with a return type of void, returning a value is not necessary. However, for functions with a non-void return type, it's necessary to return a value of that type. "

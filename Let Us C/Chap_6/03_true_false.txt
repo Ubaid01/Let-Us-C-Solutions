@@ -1,0 +1,34 @@
+[C] State whether the following statements are True or False: 
+
+(a) Storage for a register storage class variable is allocated each time the control reaches the block in which it is present. 
+False:- " Register variables are typically stored in CPU registers for faster access, but the storage allocation does not occur each time the block is reached but pre-occupied. The compiler decides whether to use registers for storage, and the allocation remains consistent within the block. "
+
+(b) An extern storage class variable is not available to the functions that precede its definition, unless the variable is explicitly declared in these functions. 
+True:- " The extern keyword informs the compiler that the variable is defined elsewhere in the program. If the variable is used before its actual definition or declaration in a function, it must be explicitly declared using extern in that function. "
+
+(c) The value of an automatic storage class variable persists between various function invocations. 
+False:- " Automatic variables (those declared inside a function without the static keyword) are created and destroyed each time the function is called. Their values do not persist between different invocations. "
+
+(d) If the CPU registers are not available, the register storage class variables are treated as static storage class variables. 
+False:- " If the compiler cannot allocate a variable to a register (due to various reasons such as insufficient registers or the compiler's optimization decisions), the variable is typically treated as an automatic storage class variable, not static. "
+
+(e) The register storage class variables cannot hold float values. 
+False:- " Register storage class variables can hold various types of data, including float values. However, the decision to place a variable in a register depends on the compiler and hardware constraints."
+
+(f) If we try to use register storage class for a float variable the compiler will flash an error message.
+False:- " While using register with a float variable is allowed syntactically, whether the compiler honors this and places a float variable in a register depends on the compiler and the platform. "
+
+(g) If the variable x is defined as extern and a variable x is also defined as a local variable of some function, then the global variable gets preference over the local variable. 
+False:- " The local variable inside a function has higher precedence or visibility within that function's scope compared to the global variable with the same name. 
+"
+(h) The default value for automatic variable is zero. 
+False:- " Automatic variables do not have a default initialization value, and their initial value is indeterminate unless explicitly initialized by the programmer. "
+
+(i) The life of static variable is till the control remains within the block in which it is defined. 
+False:- " Static variables retain their values between function calls and persist throughout the program's execution, retaining their value between invocations of the function in which they are defined."
+
+(j) If a global variable is to be defined, then the extern keyword is necessary in its declaration. 
+False:- " The extern keyword in a declaration informs the compiler that the variable is defined somewhere-else in the program. If the variable is defined in the same file or scope, the extern keyword is not necessary in its declaration. "
+
+(k) The address of register variable is not accessible.
+True. " The address of a register variable is not directly accessible because it is stored in a CPU register, and registers do not have memory addresses that can be accessed in the same way as variables stored in memory. (Also it might lead to a compilation error or warning, or the compiler might simply ignore the request and treat the variable as if it were not declared as register)"

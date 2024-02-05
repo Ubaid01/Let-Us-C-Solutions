@@ -1,0 +1,5 @@
+CT_102 Alice Computer_Science B.Tech 2020
+EE_101 Bob Electrical_Engineering B.E. 2020
+ME_103 Charlie Mechanical_Engineering B.E. 2021
+CT_102 Mathew Computer_Science B.Tech. 2021CT_102
+Obaid_Majeed Computer_Science B.Tech 2023

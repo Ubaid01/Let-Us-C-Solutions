@@ -1,0 +1,26 @@
+[E] Answer the following: 
+ 
+(a) How many bytes in memory would be occupied by the 
+following array of pointers to strings? How many bytes would 
+be required to store the same strings, if they are stored in a 
+two-dimensional character array? 
+char  *mess[ ] = {  
+                "Hammer and tongs",  
+                "Tooth and nail",  
+                "Spit and polish",  
+                "You and C"  
+                                    }   ; 
+
+1. The char *mess[] array is an array of pointers to strings. It contains pointers to the beginning of each string. Each pointer typically takes 4 or 8 bytes (depending on the architecture) to store the memory address of the string. Assuming each pointer occupies 8 bytes (on a 64-bit system), the array mess would occupy 4 * 8 = 32 .  bytes of memory (4 pointers * 8 bytes per pointer).
+2. If these strings were stored in a two-dimensional character array, the memory required would be the sum of the lengths of the strings plus the null terminators. The total memory required would depend on the length of each string. Calculating the total memory precisely involves counting characters in each string, including the null terminators, and summing them up. For example, for the given strings:
+
+"Hammer and tongs" (16 bytes including null terminator)
+"Tooth and nail" (15 bytes including null terminator)
+"Spit and polish" (16 bytes including null terminator)
+"You and C" (9 bytes including null terminator)
+Therefore, the total memory needed would be 56 bytes (16 + 15 + 16 + 9 ) 
+
+(b) Can an array of pointers to strings be used to collect strings 
+from the keyboard? If not, why not?
+
+1. (b) Yes, an array of pointers to strings can be used to collect strings from the keyboard. You can dynamically allocate memory for each string and then store their addresses in an array of pointers. This method is commonly used to handle string inputs of varying lengths. 

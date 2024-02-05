@@ -1,0 +1,35 @@
+[C] Answer the following: 
+
+" float a[ ] = { 13.24, 1.5, 1.5, 5.4, 3.5 } ; 
+float *j ; // Pointer should of same type whose address is being stored. "
+(a) An array is a collection of 
+1. different data types scattered throughout memory 
+2. the same data type scattered throughout memory 
+3. the same data type placed next to each other in memory (Correct)
+4. different data types placed next to each other in memory
+
+(b) Are the following array declarations correct? 
+1. int a (25) ; // Incorrect as round brackets used instead of curly brackets 
+2. int size = 10, b[size] ; // Correct. This is a Variable Length Array (VLA) in C, where the size of array b is determined at runtime.
+3. int c = {0,1,2} ; // To initialize an array, use square brackets like this: int c[] = {0, 1, 2};.
+
+(c) Which element of the array does this expression reference? 
+    num[4] => It refers to the 5th element of the num array
+
+(d) What is the difference between the 5's in these two expressions? (Select the correct answer) 
+int num[5] ; 
+num[5] = 11 ; 
+1. first is particular element, second is type 
+2. first is array size, second is particular element (Correct)
+3. first is particular element, second is array size 
+4. both specify array size 
+
+(e) State whether the following statements are True or False: 
+1. The array int num[26] has twenty-six elements. 
+"True. The array int num[26] has twenty-six elements, indexed from 0 to 25 inclusive."
+2. The expression num[1] designates the first element in the array 
+"False. In C, array indexing starts from 0. The expression num[1] designates the second element in the array."
+3. It is necessary to initialize the array at the time of declaration. 
+"False. It's not necessary to initialize the array at the time of declaration like int c[] = {0, 1, 2}; although it's good practice to do so."
+4. The expression num[27] designates the twenty-eighth element in the array. 
+"False. 27 indicates the total elements in array so 28th index element can't exist and out of bound."

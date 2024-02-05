@@ -1,0 +1,6 @@
+Haris; Houes#3 Block#6 Downtown; 21 1
+Nani; Houes#3 Block#6 Downtown; 33 2
+Lance; Houes#3 Block#6 Downtown; 24 2
+Lory; Houes#3 Block#6 Downtown; 21 3
+Adin; Houes#3 Block#6 Downtown; 19 2
+Nome; Houes#3 Block#6 Downtown; 23 3

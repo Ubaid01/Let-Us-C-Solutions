@@ -1,0 +1,66 @@
+[B] Answer the following: 
+
+(a) The macro FILE is defined in which of the following files: 
+1. stdlib.h 
+2. stdio.c 
+3. io.h 
+4. stdio.h  (Correct)
+
+(b) If a file contains the line “I am a boy\r\n” then on reading this line into the array str[ ] using fgets( ) what would str[ ] contain?
+1. I am a boy\r\n\0  
+2. I am a boy\r\0 
+3. I am a boy\n\0 (Correct)
+4. I am a boy 
+- So, the content of str[] after reading "I am a boy\r\n" using fgets() will be:
+- I am a boy\n\0
+"fputs( ) converts the \n to \r\n combination. 
+Here \r stands for carriage return and \n for linefeed. 
+If we read the same line back using fgets( ) the reverse conversion 
+happens. Thus when we write the first line of the poem and a “\n” 
+using two calls to fputs( ), what gets written to the file is 
+Thus conversion of \n to \r\n during writing and \r\n conversion to \n during reading is a feature of the standard library functions and not that of the OS."
+
+(c) State True or False: 
+1. The disadvantage of High Level Disk I/O functions is that the programmer has to manage the buffers. 
+"True. High Level Disk I/O functions often require buffer management by the programmer."
+2. If a file is opened for reading it is necessary that the file must exist. 
+"True. Otherwise the program will give error so avoid that also use if- pointer == NULL ."
+3. If a file opened for writing already exists its contents would be overwritten.
+"True. When a file is opened for writing, existing content is overwritten unless specified otherwise."
+4. For opening a file in append mode it is necessary that the file should exist. 
+"False. If the file is opened in append mode then if not present it will be created automatically."
+
+(d) On opening a file for reading which of the following activities are performed: 
+1. The disk is searched for existence of the file. 
+2. The file is brought into memory. 
+3. A pointer is set up which points to the first character in the file. 
+4. All the above.   (Correct)
+
+(e) Is it necessary that a file created in text mode must always be opened in text mode for subsequent operations? 
+"No, it's not necessary that a file created in text mode must always be opened in text mode for subsequent operations. Files created in text mode can still be opened in binary mode for different operations. But its not recommended to read raw data from other."
+
+(f) State True or False: 
+1. A file opened in binary mode and read using fgetc( ) would report the same number of characters in the file as reported by DOS's DIR command.
+"True. When a file is opened in binary mode and read using fgetc(), it would report the same number of characters in the file as reported by DOS's DIR command because it reads individual bytes without considering line breaks or special characters."
+
+(g) While using the statement, 
+    fp = fopen ( "myfile.c", "r" ) ; 
+    what happens if, 
+        - 'myfile.c' does not exist on the disk     
+        - 'myfile.c' exists on the disk 
+"If 'myfile.c' does not exist on the disk: fopen() will return NULL, indicating that the file could not be opened.
+If 'myfile.c' exists on the disk: fopen() will open the file successfully, providing a valid file pointer (fp) for further operations."
+
+(h) What is the purpose of the library function fflush( )? 
+"The purpose of the fflush() function is to flush the output buffer of a stream. It ensures that any buffered data for the given output stream is written to the file."
+
+(i) While using the statement, 
+    fp = fopen ( "myfile.c", "wb" ) ; 
+    what happens if, 
+    - 'myfile.c' does not exist on the disk. 
+    - 'myfile.c' exists on the disk 
+"If 'myfile.c' does not exist on the disk: fopen() with mode "wb" will create a new file named 'myfile.c' for writing in binary mode.
+If 'myfile.c' exists on the disk: fopen() with mode "wb" will open the existing file 'myfile.c' for writing in binary mode, truncating its contents."
+
+(j) A floating-point array contains percentage marks obtained by students in an examination. To store these marks in a file 'marks.c', in which mode would you open the file and why? 
+"To store floating-point array data in a file 'marks.c', it's better to open the file in text mode because it will store the human-readable representation of floating-point numbers. So, you'd open the file in text mode ("w" or "a") for writing or appending data respectively."

@@ -1,0 +1,82 @@
+The range of an Integer constant depends upon the compiler. 
+For a 16-bit compiler like Turbo C or Turbo C++ the range is -32768 to 32767.
+For a 32-bit compiler the range would be -2147483648 to +2147483647.
+
+For Integers C-offers :-
+(a) shorts are at least 2 bytes big "2-bytess for both 16 AND 32-bit processor"
+(b) longs are at least 4 bytes big "4-bytes for both 16 AND 32-bit processor"
+(c) shorts are never bigger than ints 
+(d) ints are never bigger than longs 
+"For Normal int data-type :- Size is 2-bytes for 16-bit while 4-bytpes for 32 bits processor."
+
+C allows the abbreviation of short int to short and of long int to long. So the declarations made above can be written as:- 
+long i ; "Can also write as long int i (Same for below ones)" 
+long abc ; 
+short j ; 
+short height ;
+
+unsigned int i ; 
+unsigned i ; 
+With such a declaration, the range of permissible integer values (for a 16-bit OS) will shift from the range -32768 to +32767 to the range 0 to 65535.
+Thus, declaring an integer as unsigned almost doubles the size of the largest possible value so left-most bit is now free and is not used to store the sign of the number. Note that an unsigned integer still occupies 2-bytes (for a 16-bit OS).
+
+"For Floats:- "
+A float occupies four bytes in memory and can range from -3.4e38 to +3.4e38.
+If this is insufficient then C offers a double data type that occupies 8 bytes in memory and has a range from -1.7e308 to +1.7e308.
+If the situation demands usage of real numbers that lie even beyond the range offered by double data type, then:- 
+There exists a long double that can range from -1.7e4932 to +1.7e4932. A long double occupies 10 bytes in memory.
+
+"For Chars:- "
+A signed char is same as an ordinary char and has a range from -128 to +127; whereas, an unsigned char has a range from 0 to 255.
+when ch reaches a value 255, ch++ would try to make it 256 which cannot be stored in an unsigned char. 
+Thus the only alternative is to declare ch as an int.
+
+"For Unsigned chars:- "
+If you look at ranges of chars and ints there seems to be one extra number on the negative side.
+This is because a negative number is always stored as 2's compliment of its binary.
+For example, let us see how -128 is stored. Firstly, binary of 128 is calculated (10000000),
+then its 1's compliment is obtained (01111111).A 1's compliment is obtained by changing all 0s to 1s and 1s to 0s.
+Finally, 2's compliment of this number, i.e. 10000000, gets stored. A 2's compliment is obtained by 
+adding 1 to the 1's compliment
+
+"For signed chars:- "
+This is an 8-bit number and it can be easily 
+accommodated in a char. As against this, +128 cannot be stored in a char because its binary 010000000 (left-most 0 is for positive sign) "& 1 is for negative sign" is a 9-bit number. 
+However +127 can be stored as its binary 01111111 turns out to be a 8-bit number. 
+
+"For Storage Classes:- "
+To fully define a variable one needs to mention not only its 'type' but also its 'storage class'.
+There are basically two kinds of locations in a computer where such a value may be kept— Memory and CPU registers. It is the variable's storage class that determines in which of these two locations the value is stored.
+Moreover, a variable's storage class tells us:- 
+(a) Where the variable would be stored. 
+(b) What will be the initial value of the variable, if initial value is not specifically assigned.(i.e. the default initial value). 
+(c) What is the scope of the variable; i.e. in which functions the value of the variable would be available. 
+(d) What is the life of the variable; i.e. how long would the variable exist.
+
+There are four storage classes in C: 
+
+(a) Automatic Storage Class Tasks:-
+Storage => Memory. 
+Default initial value => An unpredictable value, which is often called a garbage value. 
+Scope => Local to the block in which the variable is defined. 
+Life => Till the control remains within the block in which the variable is defined.
+
+(b) Register Storage Class Tasks:-
+Storage => CPU registers. 
+Default initial value => Garbage value. 
+Scope => Local to the block in which the variable is defined. 
+Life => Till the control remains within the block in which the variable is defined. 
+
+(c) Static Storage Class Tasks:-  
+Storage => Memory. 
+Default initial value => Zero.
+Scope => Local to the block in which the variable is defined. 
+Life => Value of the variable persists between different function calls. "Important Feature"
+
+(d) External Storage Class Tasks:-  
+Storage => Memory. 
+Default initial value => Zero. 
+Scope => Global. 
+Life => As long as the program's execution doesn't come to an end.
+
+Rules are in the pdf.
